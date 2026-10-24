@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scancli"
+version = "0.1.0"
+description = "A fast, educational TCP port scanner & service banner grabber written in pure Python (no nmap)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "notnoctis" }]
+
+[project.scripts]
+scancli = "scancli.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["scancli*"]
